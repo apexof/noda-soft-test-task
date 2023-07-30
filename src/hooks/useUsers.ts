@@ -35,6 +35,7 @@ export const useUsers = (id?: number): UseUsersResult => {
       .finally(() => {
         setLoading(false);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return {
