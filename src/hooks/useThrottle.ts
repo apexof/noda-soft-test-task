@@ -5,10 +5,7 @@ interface UseThrottledFnResult<T extends any[]> {
   isThrottled: boolean;
 }
 
-export const useThrottledFn = <T extends any[]>(
-  func: (...args: T) => void,
-  delay: number
-): UseThrottledFnResult<T> => {
+export const useThrottledFn = <T extends any[]>(func: (...args: T) => void, delay: number): UseThrottledFnResult<T> => {
   const [isThrottled, setIsThrottled] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
