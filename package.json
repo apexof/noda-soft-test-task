@@ -22,20 +22,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "rules": {
-      "max-len": [
-        "error",
-        {
-          "code": 120
-        }
-      ]
-    }
-  },
   "browserslist": {
     "production": [
       ">0.2%",

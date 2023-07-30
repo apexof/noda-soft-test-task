@@ -30,5 +30,8 @@ export const useThrottledFn = <T extends any[]>(func: (...args: T) => void, dela
     [func, delay, isThrottled]
   );
 
-  return { throttledFn, isThrottled };
+  return {
+    throttledFn,
+    isThrottled,
+  };
 };
