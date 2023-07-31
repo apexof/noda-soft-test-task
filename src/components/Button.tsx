@@ -9,7 +9,9 @@ export const Button: FC<IButtonProps> = (props) => {
   const { onClick, stopPropagation = true } = props;
 
   const handleButtonClick: MouseEventHandler<HTMLButtonElement> = (event) => {
-    stopPropagation && event.stopPropagation();
+    if (stopPropagation) {
+      event.stopPropagation();
+    }
     onClick();
   };
 
