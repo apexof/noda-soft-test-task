@@ -6,7 +6,7 @@ export const getUser = async (id: number): Promise<IUser> => {
   const res = await fetch(`${URL}/${id}`);
 
   if (!res.ok) {
-    throw new Error("IUser not found");
+    throw new Error("User not found");
   }
 
   return res.json();

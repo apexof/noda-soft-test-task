@@ -15,7 +15,7 @@ const App: FC = () => {
     if (loading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;
     if (!id) return null;
-    if (!users[id]) return <div>IUser not found</div>;
+    if (!users[id]) return <div>User not found</div>;
 
     const user = users[id];
     return <UserInfo name={user.name} phone={user.phone} />;
