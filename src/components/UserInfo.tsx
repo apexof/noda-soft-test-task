@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { memo } from "react";
 
 interface IUserInfoProps {
   name: string;
   phone: string;
 }
 
-export const UserInfo: FC<IUserInfoProps> = (props) => {
+export const UserInfo = memo(function (props: IUserInfoProps) {
   const { name, phone } = props;
 
   return (
@@ -24,4 +24,4 @@ export const UserInfo: FC<IUserInfoProps> = (props) => {
       </tbody>
     </table>
   );
-};
+});

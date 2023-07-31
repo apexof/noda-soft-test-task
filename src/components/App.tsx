@@ -9,7 +9,7 @@ const App: FC = () => {
   const [id, setId] = useState<number>();
   const { users, loading, error } = useUsers(id);
   const setRandomId = () => setId(getRandomNumber());
-  const { isThrottled, throttledFn } = useThrottledFn(setRandomId, 2500);
+  const { isThrottled, throttledFn } = useThrottledFn(setRandomId, 700);
 
   const renderUserInfo = () => {
     if (loading) return <div>Loading...</div>;
