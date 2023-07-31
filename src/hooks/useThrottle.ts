@@ -1,11 +1,14 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 
-interface UseThrottledFnResult<T extends any[]> {
+interface IUseThrottledFnResult<T extends any[]> {
   throttledFn: (...args: T) => void;
   isThrottled: boolean;
 }
 
-export const useThrottledFn = <T extends any[]>(func: (...args: T) => void, delay: number): UseThrottledFnResult<T> => {
+export const useThrottledFn = <T extends any[]>(
+  func: (...args: T) => void,
+  delay: number
+): IUseThrottledFnResult<T> => {
   const [isThrottled, setIsThrottled] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 

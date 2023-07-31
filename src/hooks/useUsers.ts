@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { User } from "../types";
+import { IUser } from "../types";
 import { getUser } from "../api/getUser";
 
-interface UseUsersResult {
+interface IUseUsersResult {
   loading: boolean;
-  users: Record<number, User>;
+  users: Record<number, IUser>;
   error?: string;
 }
 
-export const useUsers = (id?: number): UseUsersResult => {
-  const [users, setUsers] = useState<Record<number, User>>({});
+export const useUsers = (id?: number): IUseUsersResult => {
+  const [users, setUsers] = useState<Record<number, IUser>>({});
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>();
 
